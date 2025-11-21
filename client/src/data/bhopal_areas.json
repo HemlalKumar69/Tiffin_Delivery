@@ -1,144 +1,100 @@
 [
-    {
-        "area_id": "arera_colony",
-        "area_name": "Arera Colony",
-        "blocks": [
-            "E-1",
-            "E-2",
-            "E-3",
-            "Bawadia Kalan (ext.)"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null,
-        "notes": "Major residential area near MP Nagar / Habibganj"
-    },
-    {
-        "area_id": "mp_nagar",
-        "area_name": "MP Nagar",
-        "blocks": [
-            "Zone-I",
-            "Zone-II",
-            "Zone-III",
-            "TT Nagar side"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null,
-        "notes": "Commercial & residential hub"
-    },
-    {
-        "area_id": "habibganj",
-        "area_name": "Habibganj",
-        "blocks": [
-            "Old Habibganj",
-            "New Habibganj",
-            "Railway Colony"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "kolar_road",
-        "area_name": "Kolar Road",
-        "blocks": [
-            "Kolar Road Main",
-            "Neelbad Road",
-            "Indrapuri outskirts"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "hoshangabad_road",
-        "area_name": "Hoshangabad Road",
-        "blocks": [
-            "Hoshangabad Main",
-            "Old Hoshangabad Rd colonies",
-            "Khajuri"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "nehru_nagar",
-        "area_name": "Nehru Nagar",
-        "blocks": [
-            "Sector A",
-            "Sector B",
-            "Sector C"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "gandhi_nagar",
-        "area_name": "Gandhi Nagar",
-        "blocks": [
-            "Gandhi Nagar Main",
-            "Shivaji Nagar adjacent"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "govindpura",
-        "area_name": "Govindpura",
-        "blocks": [
-            "Govindpura Industrial Area",
-            "Govindpura Colony"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "ratibad",
-        "area_name": "Ratibad",
-        "blocks": [
-            "Ratibad Village",
-            "Ratibad Extension"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "indrapuri",
-        "area_name": "Indrapuri",
-        "blocks": [
-            "Indrapuri A Sector",
-            "Indrapuri B Sector"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "patel_nagar",
-        "area_name": "Patel Nagar",
-        "blocks": [
-            "Patel Nagar West",
-            "Patel Nagar East"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    },
-    {
-        "area_id": "shivaji_nagar",
-        "area_name": "Shivaji Nagar",
-        "blocks": [
-            "Shivaji Nagar Main",
-            "Shivaji Extension"
-        ],
-        "pincode": null,
-        "lat": null,
-        "lng": null
-    }
+  {
+    "area_id": "arera_colony",
+    "area_name": "Arera Colony",
+    "blocks": ["E-1", "E-2", "E-3", "Bawadia Kalan (ext.)"],
+    "pincode": null,
+    "lat": null,
+    "lng": null,
+    "notes": "Major residential area near MP Nagar / Habibganj"
+  },
+  {
+    "area_id": "mp_nagar",
+    "area_name": "MP Nagar",
+    "blocks": ["Zone-I", "Zone-II", "Zone-III", "TT Nagar side"],
+    "pincode": null,
+    "lat": null,
+    "lng": null,
+    "notes": "Commercial & residential hub"
+  },
+  {
+    "area_id": "habibganj",
+    "area_name": "Habibganj",
+    "blocks": ["Old Habibganj", "New Habibganj", "Railway Colony"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "kolar_road",
+    "area_name": "Kolar Road",
+    "blocks": ["Kolar Road Main", "Neelbad Road", "Indrapuri outskirts"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "hoshangabad_road",
+    "area_name": "Hoshangabad Road",
+    "blocks": ["Hoshangabad Main", "Old Hoshangabad Rd colonies", "Khajuri"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "nehru_nagar",
+    "area_name": "Nehru Nagar",
+    "blocks": ["Sector A", "Sector B", "Sector C"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "gandhi_nagar",
+    "area_name": "Gandhi Nagar",
+    "blocks": ["Gandhi Nagar Main", "Shivaji Nagar adjacent"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "govindpura",
+    "area_name": "Govindpura",
+    "blocks": ["Govindpura Industrial Area", "Govindpura Colony"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "ratibad",
+    "area_name": "Ratibad",
+    "blocks": ["Ratibad Village", "Ratibad Extension"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "indrapuri",
+    "area_name": "Indrapuri",
+    "blocks": ["Indrapuri A Sector", "Indrapuri B Sector"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "patel_nagar",
+    "area_name": "Patel Nagar",
+    "blocks": ["Patel Nagar West", "Patel Nagar East"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "area_id": "shivaji_nagar",
+    "area_name": "Shivaji Nagar",
+    "blocks": ["Shivaji Nagar Main", "Shivaji Extension"],
+    "pincode": null,
+    "lat": null,
+    "lng": null
+  }
 ]

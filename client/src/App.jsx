@@ -134,7 +134,15 @@ import DeliveryDashboard from "./pages/DeliveryDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import SubscriptionPlans from "./pages/subscriptionplans";
 import Notifications from "./pages/Notifications";
-import AssignDeliveryBoys from "@/pages/AssignDeliveryBoys";
+// import AssignDeliveryBoys from "@/pages/AssignDeliveryBoys";
+import DeliveryBoyList from "@/pages/delivery/DeliveryBoyList";
+import ColonyManager from "@/pages/delivery/ColonyManager";
+import BlockManager from "@/pages/delivery/BlockManager";
+import AssignColony from "@/pages/delivery/AssignColony";
+import AssignBlock from "@/pages/delivery/AssignBlock";
+import Assignments from "@/pages/delivery/Assignments";
+import CustomerList from "@/pages/delivery/CustomerList";
+import AssignDelivery from "./pages/delivery/AssignDelivery";
 
 
 
@@ -243,7 +251,16 @@ export default function App() {
           />
           <Route path="/manage-plans" element={<SubscriptionPlans />} />
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/assign-delivery" element={<AssignDeliveryBoys />} />
+          {/* <Route path="/assign-delivery" element={<AssignDeliveryBoys />} /> */}
+          <Route path="/delivery-boys" element={<DeliveryBoyList />} />
+          <Route path="/colonies" element={<ColonyManager />} />
+          <Route path="/blocks" element={<BlockManager />} />
+          <Route path="/assign-colony" element={<AssignColony />} />
+          <Route path="/assign-block/:id" element={<AssignBlock />} />
+          <Route path="/assign-block" element={<AssignBlock />} />
+          <Route path="/assignments" element={<Assignments />} />
+          <Route path="/customers" element={<CustomerList />} />
+          <Route path="/assign-delivery" element={<AssignDelivery />} />
 
 
         </Routes>
