@@ -215,9 +215,9 @@ export default function Notifications() {
                             className="border p-2 rounded-lg"
                         >
                             <option value="all_customers">All Customers</option>
-                            <option value="specific_customer">Specific Customer (By ID)</option>
+                            <option value="specific_customer">Specific Customer</option>
                             <option value="all_delivery_boys">All Delivery Boys</option>
-                            <option value="specific_delivery_boy">Specific Delivery Boy (By ID)</option>
+                            <option value="specific_delivery_boy">Specific Delivery Boy</option>
                         </select>
                     </div>
 

@@ -276,7 +276,7 @@ export default function App() {
       </div>
 
       {/* TOAST SYSTEM - Global */}
-      <Toaster />
+      <Toaster position="top-center " />
     </>
   );
 }

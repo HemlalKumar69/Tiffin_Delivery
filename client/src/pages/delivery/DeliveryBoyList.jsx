@@ -174,9 +174,13 @@ export default function DeliveryBoyList() {
 
       {/* ====================== PERFORMANCE POPUP ====================== */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 bg-opacity-30 flex items-center justify-center z-50">
-
-          <div className="bg-white w-[380px] p-6 rounded-xl shadow-xl relative">
+        <div className="fixed inset-0 bg-black/60 bg-opacity-30 flex items-center justify-center z-50"
+        onClick={() => setShowPopup(false)}
+        >
+        
+          <div className="bg-white w-[380px] p-6 rounded-xl shadow-xl relative"
+          onClick={(e) => e.stopPropagation()} 
+          >
 
             {/* Close Button */}
             <button
