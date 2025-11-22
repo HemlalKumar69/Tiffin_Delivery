@@ -160,26 +160,145 @@
 // export default AssignDelivery;
 
 
+// import areas from "@/data/bhopal_areas.json";
+// import { useState } from "react";
+
+// export default function AssignDeliveryBoys() {
+//   const [selectedArea, setSelectedArea] = useState(null);
+
+//   return (
+//     <div className="p-6">
+//       <h1 className="text-xl font-bold mb-4">Assign Delivery Boys</h1>
+
+//       {/* AREA DROPDOWN */}
+//       <label className="font-medium">Select Colony / Area</label>
+//       <select
+//         className="border p-2 rounded w-full mb-4"
+//         onChange={(e) =>
+//           setSelectedArea(areas.find((a) => a.area_id === e.target.value))
+//         }
+//         defaultValue=""
+//       >
+//         <option value="" disabled>Select Area</option>
+//         {areas.map((area) => (
+//           <option key={area.area_id} value={area.area_id}>
+//             {area.area_name}
+//           </option>
+//         ))}
+//       </select>
+
+//       {/* BLOCKS SHOW */}
+//       {selectedArea && (
+//         <div className="mt-4 p-4 border rounded bg-gray-50">
+//           <h2 className="text-md font-semibold">
+//             Blocks in {selectedArea.area_name}
+//           </h2>
+
+//           <ul className="list-disc ml-6 mt-2">
+//             {selectedArea.blocks.map((b, idx) => (
+//               <li key={idx}>{b}</li>
+//             ))}
+//           </ul>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+
+
+
+
 import areas from "@/data/bhopal_areas.json";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AssignDeliveryBoys() {
+  const navigate = useNavigate();
+
+  const [selectedBoy, setSelectedBoy] = useState("");
   const [selectedArea, setSelectedArea] = useState(null);
+  const [selectedColonies, setSelectedColonies] = useState([]);
+
+  // Dummy Delivery Boys
+  const deliveryBoys = [
+    { id: "DB101", name: "Rahul Verma" },
+    { id: "DB102", name: "Amit Singh" },
+    { id: "DB103", name: "Rohan Patel" },
+    { id: "DB104", name: "Suresh Kumar" },
+  ];
+
+  // Colony Checkbox Select Handler
+  const toggleColony = (colony) => {
+    setSelectedColonies((prev) =>
+      prev.includes(colony)
+        ? prev.filter((c) => c !== colony)
+        : [...prev, colony]
+    );
+  };
+
+  const handleAssign = () => {
+    if (!selectedBoy || !selectedArea) {
+      alert("Please select Delivery Boy and Area!");
+      return;
+    }
+
+    if (selectedColonies.length === 0) {
+      alert("Please select at least one colony!");
+      return;
+    }
+
+    alert(
+      `Assigned Successfully!\n\nDelivery Boy: ${selectedBoy}\nArea: ${selectedArea.area_name}\nColonies: ${selectedColonies.join(
+        ", "
+      )}`
+    );
+  };
 
   return (
-    <div className="p-6">
+    <div className="p-6 max-w-xl mx-auto">
+
+      {/* BACK BUTTON LEFT SIDE */}
+      <button
+        onClick={() => navigate(-1)}
+        className="mb-4 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+      >
+        ← Back
+      </button>
+
       <h1 className="text-xl font-bold mb-4">Assign Delivery Boys</h1>
+
+      {/* DELIVERY BOY DROPDOWN */}
+      <label className="font-medium">Select Delivery Boy</label>
+      <select
+        className="border p-2 rounded w-full mb-4"
+        value={selectedBoy}
+        onChange={(e) => setSelectedBoy(e.target.value)}
+      >
+        <option value="" disabled>
+          Select Delivery Boy
+        </option>
+        {deliveryBoys.map((dboy) => (
+          <option key={dboy.id} value={dboy.name}>
+            {dboy.name} ({dboy.id})
+          </option>
+        ))}
+      </select>
 
       {/* AREA DROPDOWN */}
       <label className="font-medium">Select Colony / Area</label>
       <select
         className="border p-2 rounded w-full mb-4"
-        onChange={(e) =>
-          setSelectedArea(areas.find((a) => a.area_id === e.target.value))
-        }
+        onChange={(e) => {
+          const found = areas.find((a) => a.area_id === e.target.value);
+          setSelectedArea(found);
+          setSelectedColonies([]); // reset colonies
+        }}
         defaultValue=""
       >
-        <option value="" disabled>Select Area</option>
+        <option value="" disabled>
+          Select Area
+        </option>
         {areas.map((area) => (
           <option key={area.area_id} value={area.area_id}>
             {area.area_name}
@@ -187,20 +306,35 @@ export default function AssignDeliveryBoys() {
         ))}
       </select>
 
-      {/* BLOCKS SHOW */}
+      {/* COLONY CHECKBOX LIST */}
       {selectedArea && (
         <div className="mt-4 p-4 border rounded bg-gray-50">
-          <h2 className="text-md font-semibold">
-            Blocks in {selectedArea.area_name}
+          <h2 className="text-md font-semibold mb-2">
+            Select Colonies in {selectedArea.area_name}
           </h2>
 
-          <ul className="list-disc ml-6 mt-2">
-            {selectedArea.blocks.map((b, idx) => (
-              <li key={idx}>{b}</li>
+          <div className="flex flex-col gap-2">
+            {selectedArea.blocks.map((colony, idx) => (
+              <label key={idx} className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={selectedColonies.includes(colony)}
+                  onChange={() => toggleColony(colony)}
+                />
+                {colony}
+              </label>
             ))}
-          </ul>
+          </div>
         </div>
       )}
+
+      {/* ASSIGN BUTTON */}
+      <button
+        className="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-lg w-full"
+        onClick={handleAssign}
+      >
+        Assign Selected Area to Delivery Boy
+      </button>
     </div>
   );
 }

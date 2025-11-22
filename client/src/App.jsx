@@ -135,7 +135,6 @@ import AdminDashboard from "./pages/AdminDashboard";
 import SubscriptionPlans from "./pages/subscriptionplans";
 import Notifications from "./pages/Notifications";
 // import AssignDeliveryBoys from "@/pages/AssignDeliveryBoys";
-import DeliveryBoyList from "@/pages/delivery/DeliveryBoyList";
 import ColonyManager from "@/pages/delivery/ColonyManager";
 import BlockManager from "@/pages/delivery/BlockManager";
 import AssignColony from "@/pages/delivery/AssignColony";
@@ -143,6 +142,10 @@ import AssignBlock from "@/pages/delivery/AssignBlock";
 import Assignments from "@/pages/delivery/Assignments";
 import CustomerList from "@/pages/delivery/CustomerList";
 import AssignDelivery from "./pages/delivery/AssignDelivery";
+
+import DeliveryBoyList from "@/pages/delivery/DeliveryBoyList";
+import DeliveryBoyPerformance from "./pages/delivery/DeliveryBoyPerformance";
+import SkippedDeliveriesReport from "@/pages/reports/SkippedDeliveriesReport";
 
 
 
@@ -252,7 +255,6 @@ export default function App() {
           <Route path="/manage-plans" element={<SubscriptionPlans />} />
           <Route path="/notifications" element={<Notifications />} />
           {/* <Route path="/assign-delivery" element={<AssignDeliveryBoys />} /> */}
-          <Route path="/delivery-boys" element={<DeliveryBoyList />} />
           <Route path="/colonies" element={<ColonyManager />} />
           <Route path="/blocks" element={<BlockManager />} />
           <Route path="/assign-colony" element={<AssignColony />} />
@@ -262,6 +264,13 @@ export default function App() {
           <Route path="/customers" element={<CustomerList />} />
           <Route path="/assign-delivery" element={<AssignDelivery />} />
 
+          <Route path="/deliveryboy-list" element={<DeliveryBoyList />} />
+          <Route path="/delivery-boy-performance/:id" element={<DeliveryBoyPerformance />} />
+          <Route
+    path="/skipped-deliveries"
+    element={<SkippedDeliveriesReport />}
+  />
+          
 
         </Routes>
       </div>

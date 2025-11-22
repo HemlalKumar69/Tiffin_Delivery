@@ -225,7 +225,7 @@ export default function AssignDeliveryBoys() {
       </button>
 
       {/* PAGE TITLE */}
-      <h1 className="text-xl font-bold mb-4">Assign Delivery Boys</h1>
+      <h1 className="text-xl font-bold mb-4">Assign Delivery Boys </h1>
 
       {/* AREA DROPDOWN */}
       <label className="font-medium">Select Colony / Area</label>

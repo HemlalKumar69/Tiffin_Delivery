@@ -35,7 +35,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* RIGHT SIDE — Buttons */}
-        <div className="flex flex-row items-center gap-3 md:gap-8  w-full sm:w-auto justify-between">
+        <div className="flex flex-row items-center gap-3 md:gap-2  w-aoto sm:w-auto justify-between">
 
           <Button
             onClick={() => navigate("/manage-plans")}
@@ -47,12 +47,20 @@ export default function AdminDashboard() {
 
 
           {/* ✅ Delivery Status Page Button */}
+            {/* <Button
+              onClick={() => navigate("/delivery-status")}
+              className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-md text-sm px-4 py-2"
+            >
+              Delivery Status 📦
+            </Button> */}
+
           <Button
-            onClick={() => navigate("/delivery-status")}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-md text-sm px-4 py-2"
+            onClick={() => navigate("/skipped-deliveries")}
+            className="bg-yellow-600 hover:bg-yellow-700 text-white rounded-xl shadow-md text-sm px-4 py-2"
           >
-            Delivery Status 📦
+            🚫 Skipped Deliveries Report
           </Button>
+
 
           {/* ✅ Logout Button */}
           {/* <Button
@@ -72,6 +80,13 @@ export default function AdminDashboard() {
             Assign Delivery Boys
           </Button>
 
+
+          <Button
+            onClick={() => navigate("/deliveryboy-list")}
+            className="bg-indigo-600 hover:bg-yellow-700 text-white rounded-xl shadow-md text-sm px-4 py-2"
+          >
+            👥 Delivery Boy List
+          </Button>
 
 
           <Button
